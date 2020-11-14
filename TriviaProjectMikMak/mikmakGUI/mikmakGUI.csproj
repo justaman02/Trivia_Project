@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7E775D2-B896-466B-A6EC-0DE892AAE3A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mikmakGUI</RootNamespace>
+    <AssemblyName>mikmakGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="game.Designer.cs">
+      <DependentUpon>game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otherStructs\Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="otherStructs\Client.cs" />
+    <Compile Include="createRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createRoom.Designer.cs">
+      <DependentUpon>createRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\CreateRoomRequest.cs" />
+    <Compile Include="Requests\SubmitAnswerRequest.cs" />
+    <Compile Include="responses\GetQuestionResponse.cs" />
+    <Compile Include="responses\CreateRoomResponse.cs" />
+    <Compile Include="otherStructs\CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="responses\GameStartResponse.cs" />
+    <Compile Include="responses\GetRoomsResponse.cs" />
+    <Compile Include="responses\GetRoomStateResponse.cs" />
+    <Compile Include="otherStructs\GetSocket.cs" />
+    <Compile Include="responses\GetStatisticsResponse.cs" />
+    <Compile Include="joinRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="joinRoom.Designer.cs">
+      <DependentUpon>joinRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\joinRoomRequest.cs" />
+    <Compile Include="responses\JoinRoomResponse.cs" />
+    <Compile Include="responses\LeaveRoomResponse.cs" />
+    <Compile Include="lobbyRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lobbyRoom.Designer.cs">
+      <DependentUpon>lobbyRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\LoginRequest.cs" />
+    <Compile Include="responses\LoginResponse.cs" />
+    <Compile Include="responses\LogoutResponse.cs" />
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otherStructs\MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otherStructs\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\requestCodes.cs" />
+    <Compile Include="otherStructs\RoomData.cs" />
+    <Compile Include="otherStructs\serializer.cs" />
+    <Compile Include="Requests\SignupRequest.cs" />
+    <Compile Include="responses\SignupResponse.cs" />
+    <Compile Include="responses\SubmitAnswerResponse.cs" />
+    <Compile Include="statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="statistics.Designer.cs">
+      <DependentUpon>statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otherStructs\Stats.cs" />
+    <Compile Include="otherStructs\StringValue.cs" />
+    <Compile Include="top.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="top.Designer.cs">
+      <DependentUpon>top.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="createRoom.resx">
+      <DependentUpon>createRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="game.resx">
+      <DependentUpon>game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="joinRoom.resx">
+      <DependentUpon>joinRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lobbyRoom.resx">
+      <DependentUpon>lobbyRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statistics.resx">
+      <DependentUpon>statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="top.resx">
+      <DependentUpon>top.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abraham-Regular.ttf" />
+    <None Include="Resources\ganclm_bold-webfont.ttf" />
+    <None Include="signup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mikmak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base_botton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mikmak-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smaller_mikmak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyramidBack.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base_botton-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base_botton %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomBackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyramid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_pic2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top %283%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
